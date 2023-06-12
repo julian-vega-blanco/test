@@ -17,8 +17,11 @@
 <body>
     <h1 class="text-center p-3" >Hola trainer</h1>
     <div class="container-fluid row">
-        <form class="text-center col-4" action="">
+        <form class="text-center col-4" action="" method="POST">
             <h3>Registro de empleado</h3>
+            <?php
+             include("registro.php");           
+            ?>
             <div class="mb-4">
                 <label for="exampleInputEmail" class="form-label">Nombre de la persona</label>
                 <input type="text" class="form-control" name="nombre">
@@ -52,7 +55,7 @@
   <?php
 
  /*  los datos se se muestran en la tabla son datos que han sido ingresados en la base de datos aun no he echo el ingreso de datos con el from pero se cargan los datos que meti al phpmyadmin */
-    include"conexion.php";
+ 
     $sql=$conexion->query(" select * from data");
     while($datos = $sql->fetch_object()) { ?>
    <tr>

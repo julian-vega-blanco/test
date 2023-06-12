@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-<form method="post" action="">
+<form method="post" action="" >
 
     <div class="container1 bg-primary">
     <?php
@@ -21,14 +21,16 @@
     <!-- nota para que le login te deje ingresar a la pagina deben tener el registro hecho en la base de datos ingresar tus datos en phpmyadmin donde dice insert en username y password  -->
 
         <div class="div">
-            <h5 class="bg-light">username</h5>
+            <h5 class="bg-light rounded-pill text-center">username</h5>
             <input type="text" id="username" class="input rounded-pill" name="username">
         </div>
         <div class="div">
-            <h5 class="bg-light">contraseña</h5>
+            <h5 class="bg-light rounded-pill text-center">contraseña</h5>
             <input type="password" id="input" class="input rounded-pill" name="password">
         </div>
-        <input type="submit" name="btningresar" class="btn bg-light" type="submit" value="INICIAR SESION">
+        <p class="text-center">Aun no te has registrado?</p>
+        <a href="userRegister.php" class="btn bg-light">Registrarse</a>
+        <input type="submit" name="btningresar" class="btn bg-light" type="submit" value="Iniciar sesion">
 
     </div> 
 </form>  
