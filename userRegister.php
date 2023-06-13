@@ -36,8 +36,8 @@
                 <label for="exampleInputEmail" class="form-label">Password</label>
                 <input type="password" class="form-control" name="password">
             </div>
-            <input type="submit" value="Registro" class="btn btn-primary" name="registrar">
-            <a href="login.php" class="btn bg-primary">Regresar al login</a>
+            <input type="submit" value="Registro" class="btn btn-light rounded-pill" name="registrar">
+            <a href="login.php" class="btn btn-light rounded-pill">Regresar al login</a>
     </form>
 
 

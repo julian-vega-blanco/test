@@ -1,12 +1,13 @@
 <?php
 if (!empty($_POST["registrar"])){
-  if (!empty($_POST["username"]) and !empty($_POST["password"]) and !empty($_POST["nombres"]) and !empty($_POST["apellidos"])){
-    $username=$_POST["username"];
-    $password=$_POST["password"];
+  if (!empty($_POST["nombres"]) and !empty($_POST["apellidos"]) and !empty($_POST["username"]) and !empty($_POST["password"])  ){
     $nombres=$_POST["nombres"];
     $apellidos=$_POST["apellidos"];
+    $username=$_POST["username"];
+    $password=$_POST["password"];
+    
    
-    $sql=$conexion->query(" insert into user(nombres, apellidos, username, password)values('$username','$password','$nombres','$apellidos') ");
+    $sql=$conexion->query(" insert into user(nombres, apellidos, username, password)values('$nombres','$apellidos','$username','$password') ");
 
     if($sql==1){
         echo '<div class="alert alert-success">Persona registrada correctamente</div>';
