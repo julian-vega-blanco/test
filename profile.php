@@ -1,6 +1,7 @@
 <?php
     include("conexion.php");
     include("controlador.php");
+    
 ?>
 
 <!DOCTYPE html>
@@ -16,10 +17,15 @@
 </head>
 <body>
     <h1 class="text-center p-3" >Hola trainer</h1>
+    <?php
+    include("conexion.php");
+    include ("eliminar.php");
+    ?>
     <div class="container-fluid row">
         <form class="text-center col-4" action="" method="POST">
             <h3>Registro de empleado</h3>
             <?php
+            include("conexion.php");
              include("registro.php");           
             ?>
             <div class="mb-4">
@@ -48,14 +54,15 @@
       <th scope="col">Nombre</th>
       <th scope="col">Apellido</th>
       <th scope="col">Cedula</th>
-      <th scope="col">fecha</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Actualizar</th>
+      <th scope="col">Borrar</th>
     </tr>
   </thead>
   <tbody>
   <?php
 
- /*  los datos se se muestran en la tabla son datos que han sido ingresados en la base de datos aun no he echo el ingreso de datos con el from pero se cargan los datos que meti al phpmyadmin */
- 
+
     $sql=$conexion->query(" select * from data");
     while($datos = $sql->fetch_object()) { ?>
    <tr>
@@ -64,7 +71,9 @@
       <td><?= $datos->apellido ?></td>
       <td><?= $datos->cedula ?></td>
       <td><?= $datos->fecha ?></td>
-      <td></td>
+      <td><?php echo "<a href='editar.php?id=".filas["id"]."'>EDITAR</a>?></td>
+      <td><a href="profile.php?id=<?= $datos->id ?>" class="btn btn--small btn-danger">Eliminar</a></td>
+     
     </tr>
 
     <?php }

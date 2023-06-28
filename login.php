@@ -30,7 +30,7 @@
         </div>
         <p class="text-center">Aun no te has registrado?</p>
         <a href="userRegister.php" class="btn bg-light ">Registrarse</a>
-        <input type="submit" name="btningresar" class="btn bg-light  type="submit" value="Iniciar sesion">
+        <input type="submit" name="btningresar" class="btn bg-light"  type="submit" value="Iniciar sesion">
 
     </div> 
 </form>  
